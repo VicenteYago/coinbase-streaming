@@ -19,7 +19,6 @@ def on_close(close_status_code, close_msg):
 
 def on_open(ws):
     print("Opened connection")
-    ws.send(json.dumps(params))
 
 if __name__ == "__main__":
     ws_client = WSBase(
@@ -29,6 +28,6 @@ if __name__ == "__main__":
         verbose=True
     )
     ws_client.open()
-    ws_client.subscribe(["BTC-USD"], ["market_trades"])
+    ws_client.subscribe(["BTC-USD"], ["candles"])
     ws_client.sleep_with_exception_check(10)
     ws_client.close()

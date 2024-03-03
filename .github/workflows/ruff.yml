@@ -1,0 +1,17 @@
+name: RUFF
+
+on: [pull_request]
+
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Poetry
+        run: pipx install poetry
+      - name: Create lock file
+        run: poetry lock --no-update
+      - name: Add dependencies with Poetry
+        run: poetry install
+      - name: Run RUFF
+        run: poetry run ruff

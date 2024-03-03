@@ -6,6 +6,8 @@ pipx install poetry
 pip install pre-commit
 pre-commit install
 poetry install
+
+poetry run python data-scripts/coinbase_direct.py
 ```
 
 ## Resources

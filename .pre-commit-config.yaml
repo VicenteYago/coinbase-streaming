@@ -26,3 +26,10 @@ repos:
         language: system
         entry: poetry run pyright
         types: [python]
+-   repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        language: system
+        entry: poetry run ruff
+        types: [python]

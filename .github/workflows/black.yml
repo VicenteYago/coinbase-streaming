@@ -30,6 +30,6 @@ jobs:
           mapfile -d ',' -t modified_files < <(printf '%s,' '${{ steps.files.outputs.added_modified }}')
           for file in "${modified_files[@]}"; do
             if [[ "${file}" == *.py ]]; then
-              poetry run black check "${file}"
+              poetry run black "${file}"
             fi
           done

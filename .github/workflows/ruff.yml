@@ -8,6 +8,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Create lock file
+        run: poetry lock --no-update
+
+      - name: Add dependencies with Poetry
+        run: poetry install
+
       - name: Get modified files
         id: files
         uses: jitterbit/get-changed-files@v1

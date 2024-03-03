@@ -1,4 +1,4 @@
-"""Websocket Coinbase. """
+"""Websocket Coinbase.  """
 
 import os
 

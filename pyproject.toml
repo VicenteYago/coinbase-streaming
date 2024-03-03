@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "coinbase-streaming"
+version = "0.1.0"
+description = "Streaming workflows implemented in AWS intended for fun."
+authors = ["Jose Vicente Yago Martinez <whatawonderfulworld@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+websockets = "12"
+PyJWT = "^2.8.0"
+coinbase = "^2.1.0"
+black = "^24.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

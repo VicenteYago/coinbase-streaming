@@ -5,12 +5,21 @@ description = "Streaming workflows implemented in AWS intended for fun."
 authors = ["Jose Vicente Yago Martinez <whatawonderfulworld@gmail.com>"]
 readme = "README.md"
 
+[tool.pyright]
+include = ["data-scripts/"]
+typeCheckingMode = "standard"
+defineConstant = { DEBUG = true }
+pythonVersion = "3.8"
+pythonPlatform = "Linux"
+
+
 [tool.poetry.dependencies]
 python = "^3.8"
 websockets = "12"
 PyJWT = "^2.8.0"
 coinbase = "^2.1.0"
 black = "^24.2.0"
+pyright = "^1.1.352"
 
 
 [build-system]

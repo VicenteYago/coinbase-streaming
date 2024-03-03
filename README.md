@@ -4,6 +4,7 @@ Good streaming stuff
 ```
 pipx install poetry
 pip install pre-commit
+pre-commit install
 poetry install
 ```
 

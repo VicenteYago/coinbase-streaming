@@ -1,0 +1,17 @@
+name: Pyright
+
+on: [pull_request]
+
+jobs:
+  pyright:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Poetry
+        run: pipx install poetry
+      - name: Create lock file
+        run: poetry lock --no-update
+      - name: Add dependencies with Poetry
+        run: poetry install
+      - name: Run Pyright
+        run: poetry run pyright
